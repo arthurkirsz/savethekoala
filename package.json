@@ -1,0 +1,16 @@
+{
+  "name": "savethekoala",
+  "version": "1.0.0",
+  "description": "",
+  "main": "engine.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
+  },
+  "author": "Arthur Kirsz",
+  "license": "MIT"
+}
