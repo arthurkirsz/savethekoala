@@ -24,7 +24,7 @@ THE SOFTWARE.
 
 var map = {
 
-    tile_size: 16,
+    tile_size: 32,
 
     /*
     
@@ -132,16 +132,16 @@ var map = {
     /* Velocity limits */
 
     vel_limit: {
-        x: 2,
-        y: 16
+        x: 4,
+        y: 32
     },
 
     /* Movement speed when the key is pressed */
     
     movement_speed: {
-        jump: 6,
-        left: 0.3,
-        right: 0.3
+        jump: 8,
+        left: 0.6,
+        right: 0.6
     },
     
     /* The coordinates at which the player spawns and the colour of the player */
@@ -149,7 +149,7 @@ var map = {
     player: {
         x: 2,
         y: 2,
-        colour: '#FF9900'
+        colour: '#31AAEC'
     },
     
     /* scripts refered to by the "script" variable in the tile keys */
@@ -183,15 +183,15 @@ window.requestAnimFrame =
 var canvas = document.getElementById('canvas'),
     ctx = canvas.getContext('2d');
 
-canvas.width = 400;
-canvas.height = 400;
+canvas.width = 800;
+canvas.height = 600;
 
 var game = new Engine();
     game.set_viewport(canvas.width, canvas.height);
     game.load_map(map);
 
     /* Limit the viewport to the confines of the map */
-    game.limit_viewport = true;
+    game.limit_viewport = false; // TODO : Was true initially
 
 var Loop = function() {
   

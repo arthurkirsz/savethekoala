@@ -445,6 +445,10 @@ class Engine {
             Math.PI * 2
         );
 
+        // TODO : draw an image :) and make the image generic
+        // var image = document.getElementById("source");
+        // context.drawImage(image,  this.player.loc.x - this.camera.x  - this.tile_size / 2 ,   this.player.loc.y - this.camera.y - this.tile_size / 2);
+
         context.fill();
     };
 
