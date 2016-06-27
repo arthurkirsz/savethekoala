@@ -1,6 +1,9 @@
 # savethekoala
 Little Game. Purpose ? learn to code a game with Canvas AND use Babbel, NPM, etc...
 
+![Look and feel on 27/06/2016](/screenshots/20160627.png?raw=true "Game map")
+
+
 # install
 
 Install node/npm. Then run `npm install` and `npm install --save-dev babel-preset-es2015`.
