@@ -195,6 +195,26 @@ class Engine {
             );
         }
 
+
+        // Bevel effect
+        var bevel = context.createLinearGradient(
+          x,
+          y,
+          x + this.tile_size,
+          y + this.tile_size
+        );
+  
+        bevel.addColorStop(0, "rgba(255, 255, 255, 0.05)");
+        bevel.addColorStop(1, "rgba(0, 0, 0, 0.05)");
+  
+        context.fillStyle = bevel;
+        context.fillRect(
+          x,
+          y,
+          this.tile_size, 
+          this.tile_size
+        );
+
     };
 
     draw_map(context, fore) {
