@@ -10,6 +10,7 @@ When done, you can run `npm run build` to compile ES6 Engine class to make the g
 # TODO
 - ~~Make the viewport bigger~~
 - ~~Make tiles use image instead of drawRect~~
+- ~~Beveled pixels like Deepnight's games~~
 - Create a tile map editor for the game that exports for the game Engine
 - Create a Rooms / Scenes system to make a better storytelling
 - Allow text display on events (change room, interaction with a certain tile etc...)
