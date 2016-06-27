@@ -181,13 +181,20 @@ class Engine {
 
         if (!tile || !tile.colour) return;
 
-        context.fillStyle = tile.colour;
-        context.fillRect(
-            x,
-            y,
-            this.tile_size,
-            this.tile_size
-        );
+        if(tile.id == 2) {
+            var image = document.getElementById("source");
+            context.drawImage(image, x, y, this.tile_size, this.tile_size);
+        }
+        else {
+            context.fillStyle = tile.colour;
+            context.fillRect(
+                x,
+                y,
+                this.tile_size,
+                this.tile_size
+            );
+        }
+
     };
 
     draw_map(context, fore) {
