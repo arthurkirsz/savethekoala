@@ -24,7 +24,7 @@ THE SOFTWARE.
 
 var map = {
 
-    tile_size: 32,
+    tile_size: 16,
 
     /*
     
@@ -183,10 +183,11 @@ window.requestAnimFrame =
 var canvas = document.getElementById('canvas'),
     ctx = canvas.getContext('2d');
 
-canvas.width = 800;
-canvas.height = 600;
+canvas.width = 250;
+canvas.height = 200;
 
 var game = new Engine();
+    //game.set_viewport(canvas.width/4, canvas.height/4);
     game.set_viewport(canvas.width, canvas.height);
     game.load_map(map);
 
@@ -197,9 +198,21 @@ var Loop = function() {
   
   ctx.fillStyle = '#333';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  
+
   game.update();
   game.draw(ctx);
+
+
+
+        // var imageData = ctx.getImageData(0, 0, canvas.width/2, canvas.height/2);
+
+        // // pass it to a filter and get the modified copy
+        // var filtered = ImageFilters.ResizeNearestNeighbor(imageData,  canvas.width *2, canvas.height*2);
+
+        // // put it back into a context to view the results
+        // ctx.putImageData(filtered, 0, 0);
+
+
   
   window.requestAnimFrame(Loop);
 };

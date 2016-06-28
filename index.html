@@ -10,9 +10,17 @@
 
   canvas {
     display:block;
-    margin: 80px auto 20px;
+    margin: 180px auto 20px;
     border: 1px solid #333;
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.8);
+    transform: scale(2);
+    image-rendering: optimizeSpeed;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+
   }
 
   img {
@@ -23,5 +31,6 @@
 <image src="tile.png" width="32px" id="source"/>
 
 <canvas id="canvas"></canvas>
+<script src="./lib/imagefilters.js"></script>
 <script src="./lib/engine.js"></script>
 <script src="game.js"></script>

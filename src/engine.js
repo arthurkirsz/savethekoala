@@ -183,6 +183,7 @@ class Engine {
 
         if(tile.id == 2) {
             var image = document.getElementById("source");
+
             context.drawImage(image, x, y, this.tile_size, this.tile_size);
         }
         else {
@@ -197,23 +198,23 @@ class Engine {
 
 
         // Bevel effect
-        var bevel = context.createLinearGradient(
-          x,
-          y,
-          x + this.tile_size,
-          y + this.tile_size
-        );
+        // var bevel = context.createLinearGradient(
+        //   x,
+        //   y,
+        //   x + this.tile_size,
+        //   y + this.tile_size
+        // );
   
-        bevel.addColorStop(0, "rgba(255, 255, 255, 0.05)");
-        bevel.addColorStop(1, "rgba(0, 0, 0, 0.05)");
+        // bevel.addColorStop(0, "rgba(255, 255, 255, 0.05)");
+        // bevel.addColorStop(1, "rgba(0, 0, 0, 0.05)");
   
-        context.fillStyle = bevel;
-        context.fillRect(
-          x,
-          y,
-          this.tile_size, 
-          this.tile_size
-        );
+        // context.fillStyle = bevel;
+        // context.fillRect(
+        //   x,
+        //   y,
+        //   this.tile_size, 
+        //   this.tile_size
+        // );
 
     };
 
